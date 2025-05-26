@@ -20,7 +20,18 @@ migrate_working_dir/
 .idea/
 
 # API Keys
-*env
+*.env
+
+# Build directories
+build/
+/build/
+**/build/
+web/build/
+ios/build/
+android/build/
+macos/build/
+linux/build/
+windows/build/
 
 # The .vscode folder contains launch configuration and tasks you configure in
 # VS Code which you may wish to be included in version control, so this line
