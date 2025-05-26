@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart' as carrusel;
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:medired/ui/constants/app_colors.dart';
 
@@ -12,8 +13,7 @@ class Carusel extends StatefulWidget {
 
 class _CaruselState extends State<Carusel> {
   int currentIndex = 0;
-
-  final carrusel.CarouselController controller = carrusel.CarouselController();
+  final CarouselSliderController controller = CarouselSliderController();
 
   @override
   void initState() {
@@ -46,11 +46,13 @@ class _CaruselState extends State<Carusel> {
           child: Stack(
             alignment: Alignment.center,
             children: [
-              carrusel.CarouselSlider(
+              CarouselSlider(
                 carouselController: controller,
                 items: childs,
                 options: carrusel.CarouselOptions(
-                  height: ((MediaQuery.of(context).size.width > 500) ? 500 : caruoselHeight),
+                  height: ((MediaQuery.of(context).size.width > 500)
+                      ? 500
+                      : caruoselHeight),
                   aspectRatio: 480 / 227,
                   viewportFraction: carouselViewport,
                   initialPage: 0,
